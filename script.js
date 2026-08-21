@@ -38,10 +38,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     const buttons=chooser.querySelectorAll(".choice"), result=chooser.querySelector(".result"), output=chooser.querySelector(".result-text");
     buttons.forEach(b=>b.addEventListener("click",()=>{
       const v=b.dataset.value;
-      let title="Social Media Management — R500/month";
-      let text="A consistent social media presence with professional content planning, posting and page management.";
-      if(v==="growth") text="Ideal for businesses that want stronger visibility, consistent content and active audience growth.";
-      if(v==="ads") text="Targeted advertising support to put your offers in front of the right audience and turn attention into enquiries.";
+      let title="Small Business Development — R500/month";
+      let text="2 custom HD posts per week, 1 sponsored targeted ad campaign per month, Story and targeted community-group posting, plus social platform management.";
+      if(v==="medium"){ title="Medium Business — R1,000/month"; text="3 custom HD posts per week, 2 sponsored targeted ad campaigns per month, Story and targeted community-group posting, plus social platform management."; }
+      if(v==="large"){ title="Large Business — R1,500/month"; text="5 custom HD posts per week, 2 sponsored targeted ad campaigns per month, Story and targeted community-group posting, plus social platform management."; }
+      if(v==="ads"){ title="Additional Sponsored Campaigns — From R50"; text="If you need extra advertising beyond your plan, additional sponsored targeted campaigns are available from R50, depending on your campaign requirements."; }
       output.innerHTML=`<strong>${title}</strong><p>${text}</p><a class="btn primary" href="contact.html">Get Started</a>`;
       result.classList.add("show");
     }));
